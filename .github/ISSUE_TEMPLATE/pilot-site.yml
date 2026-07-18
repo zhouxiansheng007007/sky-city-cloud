@@ -1,0 +1,31 @@
+name: 试点场地 / Pilot site
+description: 提名并初步筛选一个安全、可测量的试点场地
+title: "[Pilot] "
+labels: ["pilot-site"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 城市与场地类型
+      placeholder: 例如：上海郊区物流园停车场
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: 场地条件
+      description: 面积、周边人口、建筑、地面用途、供水供电和撤离空间。
+    validations:
+      required: true
+  - type: textarea
+    id: weather
+    attributes:
+      label: 天气与空域
+      description: 主导风、阵风、雷暴、台风/冰雪、机场或航线距离；未知也请写明。
+    validations:
+      required: true
+  - type: textarea
+    id: measurements
+    attributes:
+      label: 可提供的测量与合作
+      description: 传感器、对照区、建筑能耗、作物、水和现场管理能力。

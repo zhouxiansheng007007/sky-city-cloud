@@ -1,0 +1,35 @@
+name: 研究问题 / Research question
+description: 提交一个可测量、可证伪的科学或系统问题
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请把宏大判断拆成一个可以被数据支持或推翻的问题。
+  - type: textarea
+    id: question
+    attributes:
+      label: 研究问题
+      description: 在什么条件下，哪个指标可能如何变化？
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 假设与机制
+      description: 你预计为什么会发生？有哪些相反解释？
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 最小验证方法
+      description: 写出变量、对照、单位、时间尺度和成功/失败判据。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 数据或参考资料
+      description: 优先提供原始论文、政府或研究机构链接。

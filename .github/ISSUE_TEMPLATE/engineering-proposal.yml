@@ -1,0 +1,32 @@
+name: 工程提案 / Engineering proposal
+description: 结构、材料、系留、控制、回收或安全方案
+title: "[Engineering] "
+labels: ["engineering"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 要解决的问题
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 方案
+      description: 写明尺度、材料、质量、载荷、能源和运行边界。
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: 失效方式与安全回收
+      description: 哪些部件会先失效？如何检测、隔离和回收？
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: 最小试验
+      description: 如何在不进入真实城市空域的情况下验证？
+    validations:
+      required: true

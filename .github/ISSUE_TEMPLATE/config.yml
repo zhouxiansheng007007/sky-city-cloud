@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 项目路线图 / Project roadmap
+    url: https://github.com/zhouxiansheng007007/sky-city-cloud/blob/main/ROADMAP.md
+    about: 提交前先了解当前阶段和暂不承诺的范围。
