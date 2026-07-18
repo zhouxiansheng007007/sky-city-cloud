@@ -1,7 +1,6 @@
 name: 试点场地 / Pilot site
 description: 提名并初步筛选一个安全、可测量的试点场地
 title: "[Pilot] "
-labels: ["pilot-site"]
 body:
   - type: input
     id: location

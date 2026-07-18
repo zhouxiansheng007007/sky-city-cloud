@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="天空农云：把阳光分配给作物、城市降温、水热循环和必要控制电力的开放式基础设施研究。">
+  <meta property="og:title" content="天空农云 · Sky City Cloud">
+  <meta property="og:description" content="把阳光分给生命，而不只分给电池。">
+  <meta property="og:image" content="og.png">
+  <title>天空农云 · Sky City Cloud</title>
+  <style>
+    :root{--m:#f2ebdd;--p:#fbf7ee;--f:#153b2d;--f2:#0d2b21;--g:#2e7d4f;--l:#77a957;--s:#b7cc76;--a:#f5a623;--w:#4f9f93;--c:#a95e36;--mut:#607064;--line:rgba(21,59,45,.18)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--f);background:linear-gradient(rgba(21,59,45,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(21,59,45,.035) 1px,transparent 1px),var(--m);background-size:40px 40px;font-family:"Avenir Next","PingFang SC",system-ui,sans-serif}a{color:inherit;text-decoration:none}.shell{width:min(1220px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(242,235,221,.88)}nav{min-height:76px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:12px;margin-right:auto;font-family:"Songti SC",Georgia,serif;font-weight:700}.mark{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--p)}.mark:after{content:"";width:15px;height:20px;border-radius:80% 10%;background:var(--g);transform:rotate(-25deg);box-shadow:7px 7px 0 -2px var(--s)}nav>a:not(.brand){font-size:12px;font-weight:700}button,.button{border:0;border-radius:999px;padding:11px 16px;font:inherit;font-size:11px;font-weight:800;cursor:pointer}.lang{color:var(--f);border:1px solid var(--line);background:var(--p)}.button{color:white;background:var(--f)}
+    .hero{min-height:620px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:70px 0}.eyebrow,.kicker{color:var(--g);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow:before,.kicker:before{content:"";width:28px;height:1px;display:inline-block;margin-right:10px;vertical-align:middle;background:currentColor}h1,h2{font-family:"Songti SC",Georgia,serif;letter-spacing:-.045em}h1{margin:18px 0 24px;font-size:clamp(52px,6vw,78px);line-height:1.08}h1 em{color:var(--g);font-style:normal}h2{margin:20px 0 0;font-size:clamp(36px,4.5vw,58px);line-height:1.12}.lead{color:var(--mut);line-height:1.8}.actions{display:flex;gap:12px;margin-top:28px}.primary{border-radius:14px;padding:15px 20px}.outline{color:var(--f);border:1px solid var(--line);border-radius:14px;background:rgba(251,247,238,.5)}
+    .visual{position:relative;min-height:480px;overflow:hidden;border:1px solid var(--line);border-radius:34px;background:linear-gradient(160deg,var(--p),#dfe8d5);box-shadow:0 24px 70px rgba(21,59,45,.12)}.sun{position:absolute;top:55px;right:50px;width:82px;height:82px;border-radius:50%;background:var(--a);box-shadow:0 0 0 18px rgba(245,166,35,.1)}.cloud{position:absolute;top:145px;left:12%;width:68%;height:130px;border:1px solid var(--line);border-radius:55% 60% 44% 50%;background:rgba(251,247,238,.92);box-shadow:55px -20px 0 -4px rgba(251,247,238,.9),90px 12px 0 -8px rgba(251,247,238,.9),inset 0 -20px 30px rgba(79,159,147,.13);animation:float 6s ease-in-out infinite}.deck{position:absolute;z-index:2;left:28%;right:24%;top:245px;height:22px;border-radius:50%;background:var(--g);box-shadow:0 8px 0 var(--c)}.deck:before{content:"♣  ♣  ♣  ♣  ♣  ♣";position:absolute;left:8%;right:8%;bottom:9px;color:var(--l);font-size:23px;letter-spacing:8px;white-space:nowrap}.tether{position:absolute;top:266px;left:49%;width:1px;height:150px;background:rgba(21,59,45,.45)}.tether:before,.tether:after{content:"";position:absolute;top:0;width:1px;height:145px;background:inherit;transform-origin:top}.tether:before{transform:rotate(19deg)}.tether:after{transform:rotate(-19deg)}.city{position:absolute;left:16%;right:16%;bottom:46px;height:70px;display:flex;align-items:end;gap:9px;border-bottom:2px solid var(--line)}.city i{width:11%;display:block;border:1px solid var(--line);background:rgba(251,247,238,.65)}.city i:nth-child(1){height:35px}.city i:nth-child(2){height:62px}.city i:nth-child(3){height:45px}.city i:nth-child(4){height:70px}.city i:nth-child(5){height:40px}.city i:nth-child(6){height:58px}.city i:nth-child(7){height:31px}
+    .manifest{padding:88px 0;color:var(--p);background:var(--f)}.manifest-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px}.manifest p{color:rgba(251,247,238,.7);line-height:1.8}.paths{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border-block:1px solid rgba(251,247,238,.18)}.path{padding:22px;border-right:1px solid rgba(251,247,238,.18)}.path:last-child{border:0}.path strong{display:block;color:#ffd77a;font:700 30px "Songti SC",Georgia,serif}.path span{font-size:10px}
+    .sandbox{padding:96px 0}.intro-grid{display:grid;grid-template-columns:1fr .7fr;gap:60px;align-items:end}.intro-grid>p{color:var(--mut);line-height:1.7}.lab{display:grid;grid-template-columns:.72fr 1.28fr;margin-top:46px;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--p);box-shadow:0 24px 70px rgba(21,59,45,.1)}.controls{padding:32px;border-right:1px solid var(--line);background:#f8f3e9}.field{display:block;margin-bottom:26px}.field>span{display:flex;justify-content:space-between;margin-bottom:10px;font-size:12px;font-weight:750}.field output{font-family:ui-monospace,monospace}.field input{width:100%;accent-color:var(--g)}.results{padding:34px}.power{display:flex;align-items:end;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid var(--line)}.power span{font-size:11px;color:var(--mut)}.power strong{font:700 clamp(54px,7vw,84px)/.8 "Songti SC",Georgia,serif}.power b{color:var(--g)}.alloc{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:24px;background:var(--line);border:1px solid var(--line)}.alloc article{padding:18px;background:var(--p)}.alloc small{color:var(--mut)}.alloc strong{display:block;margin-top:8px;font-size:20px}.bar{height:4px;margin-top:12px;background:rgba(21,59,45,.1)}.bar i{display:block;height:100%;background:var(--l)}.alloc article:nth-child(2) .bar i{background:var(--w)}.alloc article:nth-child(3) .bar i{background:var(--a)}.alloc article:nth-child(4) .bar i{background:var(--c)}.note{margin:24px 0 0;padding-left:14px;color:var(--mut);border-left:2px solid var(--a);font-size:10px;line-height:1.6}
+    .risk{padding:92px 0;color:var(--p);background:var(--f2)}.risk-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}.risk-list article{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid rgba(251,247,238,.15)}.risk-list>article>span{color:var(--a);font:11px ui-monospace,monospace}.risk-list h3{margin:0 0 7px;font-size:17px}.risk-list p{margin:0;color:rgba(251,247,238,.62);font-size:12px;line-height:1.65}.join{padding:92px 0;text-align:center}.join p{max-width:720px;margin:24px auto;color:var(--mut);line-height:1.75}.join .primary{display:inline-flex}footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mut);font-size:10px}.foot{display:flex;justify-content:space-between;gap:20px}
+    @keyframes float{50%{transform:translateY(-7px)}}@media(max-width:820px){nav>a:not(.brand){display:none}.hero,.manifest-grid,.intro-grid,.lab,.risk-grid{grid-template-columns:1fr}.hero{padding:55px 0}.visual{min-height:420px}.manifest-grid,.risk-grid{gap:42px}.paths{grid-template-columns:1fr 1fr}.lab{border-radius:22px}.controls{border-right:0;border-bottom:1px solid var(--line)}.alloc{grid-template-columns:1fr}.foot{flex-direction:column}}@media(max-width:520px){.shell{width:calc(100% - 26px)}.lang{display:none}h1{font-size:45px}.actions{flex-direction:column}.actions a{text-align:center}.visual{min-height:360px}.cloud{left:4%;width:75%}.deck{left:18%;right:16%;top:230px}.tether{top:250px}.paths{grid-template-columns:1fr}.path{border-right:0;border-bottom:1px solid rgba(251,247,238,.18)}.results,.controls{padding:22px}.power{display:grid;grid-template-columns:1fr auto}.power span{grid-column:1/-1}.power strong{font-size:60px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="shell">
+      <a class="brand" href="#top"><span class="mark"></span><span>天空农云<br><small>SKY CITY CLOUD</small></span></a>
+      <a href="#idea" data-zh="理念" data-en="Idea">理念</a>
+      <a href="#sandbox" data-zh="能量沙盘" data-en="Energy sandbox">能量沙盘</a>
+      <a href="#risks" data-zh="现实约束" data-en="Constraints">现实约束</a>
+      <button class="lang" id="lang" type="button">EN</button>
+      <a class="button" href="https://github.com/zhouxiansheng007007/sky-city-cloud" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero shell" id="top">
+      <div>
+        <p class="eyebrow" data-zh="开放式城市基础设施 · 概念验证中" data-en="Open civic infrastructure · concept in validation">开放式城市基础设施 · 概念验证中</p>
+        <h1 data-zh="把阳光分给<em>生命</em>，而不只分给电池" data-en="Allocate sunlight to <em>life</em>, not only to batteries">把阳光分给<em>生命</em>，而不只分给电池</h1>
+        <p class="lead" data-zh="一组可回收、可系留、可实验的空中农业与遮阳模块：优先服务作物、蒸腾冷却和水热循环，只保留必要的控制电力。" data-en="A family of recoverable, tethered aerial farming and shade modules that prioritise crops, evapotranspiration and water–heat cycles, while keeping only essential control power.">一组可回收、可系留、可实验的空中农业与遮阳模块：优先服务作物、蒸腾冷却和水热循环，只保留必要的控制电力。</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/zhouxiansheng007007/sky-city-cloud/issues/new/choose" target="_blank" rel="noreferrer" data-zh="参与共建 ↗" data-en="Join the build ↗">参与共建 ↗</a>
+          <a class="button outline" href="#sandbox" data-zh="查看能量沙盘" data-en="Open the sandbox">查看能量沙盘</a>
+        </div>
+      </div>
+      <div class="visual" role="img" aria-label="A tethered aerial crop canopy above a shaded city">
+        <div class="sun"></div><div class="cloud"></div><div class="deck"></div><div class="tether"></div>
+        <div class="city"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+    <section class="manifest" id="idea">
+      <div class="shell manifest-grid">
+        <div><p class="kicker">01 / IDEA</p><h2 data-zh="先使用阳光，再决定是否发电。" data-en="Use sunlight first. Then decide what becomes electricity.">先使用阳光，再决定是否发电。</h2></div>
+        <div>
+          <p data-zh="把阳光当作需要动态编排的城市资源，探索作物、阴影、蒸腾和低品位热之间的系统总收益。" data-en="Treat sunlight as a dynamically allocated urban resource and explore the total value across crops, shade, transpiration and low-grade heat.">把阳光当作需要动态编排的城市资源，探索作物、阴影、蒸腾和低品位热之间的系统总收益。</p>
+          <div class="paths"><div class="path"><strong id="mCrop">45%</strong><span data-zh="作物光合" data-en="Crop growth">作物光合</span></div><div class="path"><strong id="mCool">25%</strong><span data-zh="蒸腾冷却" data-en="Evapotranspiration">蒸腾冷却</span></div><div class="path"><strong id="mWater">20%</strong><span data-zh="水热循环" data-en="Water & heat">水热循环</span></div><div class="path"><strong id="mControl">10%</strong><span data-zh="控制电力" data-en="Control power">控制电力</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="sandbox" id="sandbox">
+      <div class="shell">
+        <div class="intro-grid"><div><p class="kicker">02 / SANDBOX</p><h2 data-zh="先看量级，再谈承诺。" data-en="Start with scale, not promises.">先看量级，再谈承诺。</h2></div><p data-zh="调整面积、辐照度和四向分配。结果是便于讨论的物理量级，不代表产量或降温承诺。" data-en="Adjust area, irradiance and the four pathways. Outputs are discussion-scale physics, not yield or cooling guarantees.">调整面积、辐照度和四向分配。结果是便于讨论的物理量级，不代表产量或降温承诺。</p></div>
+        <div class="lab">
+          <div class="controls">
+            <label class="field"><span><b data-zh="云幕面积" data-en="Canopy area">云幕面积</b><output id="areaOut">1.0 ha</output></span><input id="area" type="range" min=".5" max="20" step=".5" value="1"></label>
+            <label class="field"><span><b data-zh="正午辐照度" data-en="Noon irradiance">正午辐照度</b><output id="sunOut">800 W/m²</output></span><input id="sunRange" type="range" min="400" max="1000" step="25" value="800"></label>
+            <label class="field"><span><b data-zh="作物光合" data-en="Crop growth">作物光合</b><output id="cropOut">45%</output></span><input class="share" data-key="crop" type="range" min="0" max="85" value="45"></label>
+            <label class="field"><span><b data-zh="蒸腾冷却" data-en="Evapotranspiration">蒸腾冷却</b><output id="coolOut">25%</output></span><input class="share" data-key="cool" type="range" min="0" max="85" value="25"></label>
+            <label class="field"><span><b data-zh="水热循环" data-en="Water & heat">水热循环</b><output id="waterOut">20%</output></span><input class="share" data-key="water" type="range" min="0" max="85" value="20"></label>
+            <label class="field"><span><b data-zh="控制电力" data-en="Control power">控制电力</b><output id="controlOut">10%</output></span><input class="share" data-key="control" type="range" min="0" max="85" value="10"></label>
+          </div>
+          <div class="results" aria-live="polite">
+            <div class="power"><span data-zh="截获太阳功率" data-en="Intercepted solar power">截获太阳功率</span><strong id="power">8.00</strong><b>MW</b></div>
+            <div class="alloc">
+              <article><small data-zh="作物光合" data-en="Crop growth">作物光合</small><strong id="cropMw">3.60 MW</strong><div class="bar"><i id="cropBar" style="width:45%"></i></div></article>
+              <article><small data-zh="蒸腾冷却" data-en="Evapotranspiration">蒸腾冷却</small><strong id="coolMw">2.00 MW</strong><div class="bar"><i id="coolBar" style="width:25%"></i></div></article>
+              <article><small data-zh="水热循环" data-en="Water & heat">水热循环</small><strong id="waterMw">1.60 MW</strong><div class="bar"><i id="waterBar" style="width:20%"></i></div></article>
+              <article><small data-zh="控制电力" data-en="Control power">控制电力</small><strong id="controlMw">0.80 MW</strong><div class="bar"><i id="controlBar" style="width:10%"></i></div></article>
+            </div>
+            <p class="note" data-zh="模型未计入光谱选择性、膜透射、风致变形、作物饱和、泵送损耗和云量变化。" data-en="The model omits spectral selectivity, membrane transmission, wind deformation, crop saturation, pumping losses and cloud variability.">模型未计入光谱选择性、膜透射、风致变形、作物饱和、泵送损耗和云量变化。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="risk" id="risks">
+      <div class="shell risk-grid">
+        <div><p class="kicker">03 / CONSTRAINTS</p><h2 data-zh="最大的敌人是重量、风和失效方式。" data-en="The hardest problems are weight, wind and graceful failure.">最大的敌人是重量、风和失效方式。</h2></div>
+        <div class="risk-list">
+          <article><span>01</span><div><h3 data-zh="风与阵风" data-en="Wind & gusts">风与阵风</h3><p data-zh="大面积平台本质上是一张巨型风帆，必须模块化、可泄压、可分离。" data-en="A large platform is a giant sail; it must be modular, ventable and separable.">大面积平台本质上是一张巨型风帆，必须模块化、可泄压、可分离。</p></div></article>
+          <article><span>02</span><div><h3 data-zh="水的重量" data-en="Water mass">水的重量</h3><p data-zh="1 立方米水约重 1 吨，循环库存和回收路径决定农业舱是否成立。" data-en="One cubic metre of water is about one tonne; inventory and recovery define feasibility.">1 立方米水约重 1 吨，循环库存和回收路径决定农业舱是否成立。</p></div></article>
+          <article><span>03</span><div><h3 data-zh="极端天气" data-en="Extreme weather">极端天气</h3><p data-zh="雷电、冰雹、台风与强对流要求主动降落、冗余系留和安全区。" data-en="Lightning, hail and severe convection demand active descent, redundancy and safe zones.">雷电、冰雹、台风与强对流要求主动降落、冗余系留和安全区。</p></div></article>
+          <article><span>04</span><div><h3 data-zh="空域与阳光权" data-en="Airspace & sunlight rights">空域与阳光权</h3><p data-zh="阴影、居民采光、航线和屋顶光伏都需要公开治理。" data-en="Shade, daylight, flight paths and rooftop solar require public governance.">阴影、居民采光、航线和屋顶光伏都需要公开治理。</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="join shell">
+      <p class="kicker">OPEN SOURCE</p><h2 data-zh="把未来基础设施拆成可证伪的小实验。" data-en="Break future infrastructure into falsifiable experiments.">把未来基础设施拆成可证伪的小实验。</h2>
+      <p data-zh="欢迎农业、结构、材料、城市气候、水热、控制、安全和公共治理团队提交问题、数据、反例与试点场地。" data-en="Contributors in agriculture, structures, materials, urban climate, water, controls, safety and public governance are invited to submit questions, data, counterexamples and pilot sites.">欢迎农业、结构、材料、城市气候、水热、控制、安全和公共治理团队提交问题、数据、反例与试点场地。</p>
+      <a class="button primary" href="https://github.com/zhouxiansheng007007/sky-city-cloud" target="_blank" rel="noreferrer" data-zh="在 GitHub 参与共建 ↗" data-en="Build with us on GitHub ↗">在 GitHub 参与共建 ↗</a>
+    </section>
+  </main>
+  <footer><div class="shell foot"><span>天空农云 · SKY CITY CLOUD</span><span data-zh="开放概念研究，不构成工程、投资或产量承诺。" data-en="Open concept research—not an engineering, investment or yield promise.">开放概念研究，不构成工程、投资或产量承诺。</span></div></footer>
+  <script>
+    const keys=["crop","cool","water","control"], state={crop:45,cool:25,water:20,control:10};
+    const $=id=>document.getElementById(id);
+    function render(){
+      const area=+$("area").value,sun=+$("sunRange").value,power=area*10000*sun/1e6;
+      $("areaOut").textContent=area.toFixed(1)+" ha";$("sunOut").textContent=sun+" W/m²";$("power").textContent=power.toFixed(power<10?2:1);
+      keys.forEach(k=>{$(k+"Out").textContent=state[k]+"%";$("m"+k[0].toUpperCase()+k.slice(1)).textContent=state[k]+"%";$(k+"Mw").textContent=(power*state[k]/100).toFixed(power*state[k]/100<10?2:1)+" MW";$(k+"Bar").style.width=state[k]+"%"});
+    }
+    document.querySelectorAll(".share").forEach(input=>input.addEventListener("input",e=>{
+      const key=e.target.dataset.key,value=+e.target.value,others=keys.filter(k=>k!==key),remain=100-value,total=others.reduce((s,k)=>s+state[k],0);state[key]=value;let used=0;
+      others.forEach((k,i)=>{const next=i===others.length-1?remain-used:Math.round(state[k]/total*remain);state[k]=next;used+=next;document.querySelector(`.share[data-key="${k}"]`).value=next});render();
+    }));
+    $("area").addEventListener("input",render);$("sunRange").addEventListener("input",render);
+    let lang="zh";$("lang").addEventListener("click",()=>{lang=lang==="zh"?"en":"zh";$("lang").textContent=lang==="zh"?"EN":"中文";document.documentElement.lang=lang==="zh"?"zh-CN":"en";document.querySelectorAll("[data-zh]").forEach(el=>el.innerHTML=el.dataset[lang])});render();
+  </script>
+</body>
+</html>

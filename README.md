@@ -6,6 +6,11 @@
 
 它不是一座等待建成的“漂浮城市”，而是一组可以逐步证伪的工程假设。
 
+## 在线体验
+
+- [完整互动网站](https://sky-city-cloud-zhou007.zhouxiansheng007007.chatgpt.site)
+- [GitHub Pages 静态版](https://zhouxiansheng007007.github.io/sky-city-cloud/)
+
 ## 核心问题
 
 > 如果不把“发电量最大化”设为唯一目标，作物、阴影、蒸腾、水热回收与少量控制电力之间，能否找到更高的系统总收益？

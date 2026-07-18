@@ -1,7 +1,6 @@
 name: 研究问题 / Research question
 description: 提交一个可测量、可证伪的科学或系统问题
 title: "[Research] "
-labels: ["research"]
 body:
   - type: markdown
     attributes:

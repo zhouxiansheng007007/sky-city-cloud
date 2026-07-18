@@ -1,7 +1,6 @@
 name: 工程提案 / Engineering proposal
 description: 结构、材料、系留、控制、回收或安全方案
 title: "[Engineering] "
-labels: ["engineering"]
 body:
   - type: textarea
     id: problem
