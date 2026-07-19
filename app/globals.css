@@ -825,6 +825,108 @@ h3 {
   bottom: 19px;
 }
 
+.concept-figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(21, 59, 45, 0.2);
+  border-radius: 38px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.concept-image-frame {
+  position: relative;
+  overflow: hidden;
+  background: #efe4cd;
+}
+
+.concept-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 28%;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgba(13, 43, 33, 0.15));
+}
+
+.concept-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.concept-figure:hover .concept-image {
+  transform: scale(1.018);
+}
+
+.concept-caption {
+  display: grid;
+  gap: 18px;
+  padding: 20px 22px 22px;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 92% 10%, rgba(119, 169, 87, 0.2), transparent 35%),
+    var(--forest);
+}
+
+.concept-caption-copy {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.concept-caption-copy strong {
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
+  font-size: clamp(18px, 1.7vw, 24px);
+  letter-spacing: 0.02em;
+}
+
+.concept-caption-copy small {
+  max-width: 240px;
+  color: rgba(251, 247, 238, 0.66);
+  font-size: 9px;
+  line-height: 1.55;
+  text-align: right;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.concept-signals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-light);
+  border-radius: 12px;
+  background: var(--line-light);
+  list-style: none;
+}
+
+.concept-signals li {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  color: rgba(251, 247, 238, 0.86);
+  background: rgba(13, 43, 33, 0.76);
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.concept-signals span {
+  color: var(--amber-soft);
+  font-family: ui-monospace, monospace;
+  font-size: 8px;
+}
+
 .manifesto {
   padding-block: 104px;
   color: var(--paper);
@@ -1687,7 +1789,7 @@ footer {
   }
 
   .hero {
-    grid-template-columns: 0.92fr 1.08fr;
+    grid-template-columns: 0.82fr 1.18fr;
     gap: 24px;
   }
 
@@ -1844,6 +1946,25 @@ footer {
   .field-visual {
     min-height: 440px;
     border-radius: 26px;
+  }
+
+  .concept-figure {
+    border-radius: 26px;
+  }
+
+  .concept-caption-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .concept-caption-copy small {
+    max-width: none;
+    text-align: left;
+  }
+
+  .concept-signals {
+    grid-template-columns: 1fr 1fr;
   }
 
   .visual-header {

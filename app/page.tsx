@@ -18,13 +18,15 @@ const copy = {
     headlineB: "生命",
     headlineC: "，而不只分给电池",
     intro:
-      "天空农云不是一座漂浮城市，而是一组可回收、可系留、可实验的空中农业与遮阳模块。它把入射阳光优先分配给作物生长、蒸腾冷却和水热循环，只保留必要的控制电力。",
+      "天空农云是一座与自然协作的云朵农场：在城市上空形成可控阴影，为街道和建筑降温；用分层农业生产高价值作物，并作为水、营养与必要电力的空中补给站。",
     primary: "参与共建",
     secondary: "查看能量沙盘",
     meta: ["光谱分配", "可控阴影", "空中水培", "开放研究"],
-    visualTitle: "系留云幕 · 实验单元",
-    visualStatus: "概念尺度 / 非施工图",
-    visualLabels: ["太阳光谱膜", "轻量作物舱", "蒸腾冷却雾", "复合系留缆"],
+    visualTitle: "城市降温云朵农场 · 能源补给站",
+    visualStatus: "让农业、城市与自然进入同一个循环",
+    visualAlt:
+      "天空农云概念图：云朵形态的分层生态农场漂浮在城市上空，通过阴影降温，并循环水、营养与辅助能源",
+    visualLabels: ["可控阴影降温", "分层生态农场", "太阳能辅助供能", "水与营养循环"],
     manifestoKicker: "01 / 核心命题",
     manifestoTitle: "先使用阳光，再决定是否发电。",
     manifestoBody:
@@ -116,13 +118,15 @@ const copy = {
     headlineB: "life",
     headlineC: ", not only to batteries",
     intro:
-      "Sky City Cloud is not a floating city. It is a family of recoverable, tethered aerial farming and shade modules that prioritise crop growth, evapotranspiration and water–heat cycles, while keeping only the electricity needed for control.",
+      "Sky City Cloud is a cloud farm designed to work with nature: casting adaptive shade to cool streets and buildings, growing high-value crops in layered habitats, and serving as an aerial station for water, nutrients and essential power.",
     primary: "Join the build",
     secondary: "Open the sandbox",
     meta: ["Spectral routing", "Adaptive shade", "Aerial hydroponics", "Open research"],
-    visualTitle: "Tethered canopy · field cell",
-    visualStatus: "Concept scale / not for construction",
-    visualLabels: ["Spectral membrane", "Lightweight crop deck", "Cooling mist", "Composite tether"],
+    visualTitle: "Urban cooling cloud farm · resource station",
+    visualStatus: "Agriculture, city and nature in one living cycle",
+    visualAlt:
+      "Sky City Cloud concept: a cloud-shaped layered ecological farm above a city, casting cooling shade while circulating water, nutrients and auxiliary energy",
+    visualLabels: ["Adaptive cooling shade", "Layered ecological farm", "Solar-assisted supply", "Water & nutrient loop"],
     manifestoKicker: "01 / Core proposition",
     manifestoTitle: "Use sunlight first. Then decide what becomes electricity.",
     manifestoBody:
@@ -335,56 +339,33 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="field-visual" role="img" aria-label="A tethered aerial crop canopy above a shaded city">
-            <div className="visual-header">
-              <span>{t.visualTitle}</span>
-              <small>{t.visualStatus}</small>
+          <figure className="concept-figure">
+            <div className="concept-image-frame">
+              <img
+                className="concept-image"
+                src="/og.png"
+                alt={t.visualAlt}
+                width="1200"
+                height="630"
+                loading="eager"
+                decoding="async"
+              />
             </div>
-            <div className="sun" aria-hidden="true">
-              <i />
-            </div>
-            <div className="spectral-ray ray-a" aria-hidden="true" />
-            <div className="spectral-ray ray-b" aria-hidden="true" />
-            <div className="spectral-ray ray-c" aria-hidden="true" />
-            <div className="cloud-system" aria-hidden="true">
-              <div className="cloud-lobe lobe-a" />
-              <div className="cloud-lobe lobe-b" />
-              <div className="cloud-lobe lobe-c" />
-              <div className="membrane">
-                <span />
-                <span />
-                <span />
+            <figcaption className="concept-caption">
+              <div className="concept-caption-copy">
+                <strong>{t.visualTitle}</strong>
+                <small>{t.visualStatus}</small>
               </div>
-              <div className="crop-deck">
-                {Array.from({ length: 11 }).map((_, index) => (
-                  <i key={index} style={{ "--i": index } as React.CSSProperties} />
+              <ul className="concept-signals" aria-label="Concept functions">
+                {t.visualLabels.map((label, index) => (
+                  <li key={label}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    {label}
+                  </li>
                 ))}
-              </div>
-              <div className="water-loop">
-                <span />
-              </div>
-              <div className="service-core" />
-              <div className="mist mist-a" />
-              <div className="mist mist-b" />
-            </div>
-            <div className="tether tether-a" aria-hidden="true" />
-            <div className="tether tether-b" aria-hidden="true" />
-            <div className="tether tether-c" aria-hidden="true" />
-            <div className="shade-field" aria-hidden="true" />
-            <div className="city" aria-hidden="true">
-              {Array.from({ length: 12 }).map((_, index) => (
-                <i key={index} style={{ "--h": `${24 + ((index * 17) % 60)}px` } as React.CSSProperties} />
-              ))}
-            </div>
-            <ol className="visual-labels">
-              {t.visualLabels.map((label, index) => (
-                <li key={label} className={`label-${index + 1}`}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  {label}
-                </li>
-              ))}
-            </ol>
-          </div>
+              </ul>
+            </figcaption>
+          </figure>
         </section>
 
         <section className="manifesto" id="idea">
